@@ -56,7 +56,6 @@ const constrolSearchResult = async function () {
 const controlPagination = function (goToPage) {
   resultsView.render(model.pagesOnPage(goToPage))
   paginationView.render(model.state.search)
-  console.log(goToPage)
 }
 
 const controlServings = function (newServings) {
@@ -88,7 +87,6 @@ const controlNewRecipe = async function (newRecipe) {
 
     // Upload new recipe data
     await model.uploadRecipe(newRecipe)
-    console.log(model.state.recipe)
 
     // Render new recipe
     recipeView.render(model.state.recipe)
